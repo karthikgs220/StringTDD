@@ -1,8 +1,6 @@
 package STringTest;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.AfterEach;
+import static org.junit.Assert.assertEquals;
 import org.junit.jupiter.api.Test;
 
 class TestCase8 {
