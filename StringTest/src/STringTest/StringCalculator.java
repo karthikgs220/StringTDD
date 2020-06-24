@@ -5,7 +5,7 @@ public class StringCalculator {
 	public int add(String numbers) throws Exception {
 		int sum = 0;
 		boolean flag = false;
-		String temp = "";
+		String temp = "0";
 		String temp1= "";
 			if (numbers.isEmpty())
 				sum=0;
@@ -17,27 +17,30 @@ public class StringCalculator {
 					char a = '-';
 					if(Character.isDigit(c)) {
 						temp += c;
-						sum+=Integer.parseInt(temp);
+						if (Integer.parseInt(temp) > 1000)
+							temp="0";						
 					}
 					else if (c == a) {
 						char cp = numbers.charAt(i+1);
 						if(Character.isDigit(cp))
 						{
-							flag = true;
 							temp1+="-"+cp;
+							flag = true;
+							
 						}
 						
 					}
 					else
 					{
-						temp="0";
 						sum+=Integer.parseInt(temp);
+						temp="0";
 					}
 				}
+				
 				if (flag)
 					throw new Exception("No negetive numbers "+ temp1);
 			}
 			
-	return sum;
+	return sum+Integer.parseInt(temp);
 	}
 }
