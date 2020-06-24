@@ -10,7 +10,7 @@ class TestCase1 {
 		StringCalculator st = new StringCalculator();
 		String s1 = "";
 		int out = st.add(s1);
-		assertEquals(0, out);
+		assertEquals(0, out);  
 	}
 
 }
