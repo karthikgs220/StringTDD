@@ -27,8 +27,7 @@ public class StringCalculator {
 						temp1+="-";
 						if(Character.isDigit(cp))
 						{
-							int j=i+1;
-							for (j=i+1;j<numbers.length();j++) {
+							for (int j=i+1;j<numbers.length();j++) {
 								
 								if(Character.isDigit(numbers.charAt(j))==true) {
 									temp1+=numbers.charAt(j);
