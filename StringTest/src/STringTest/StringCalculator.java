@@ -1,8 +1,10 @@
 package STringTest;
 
 public class StringCalculator {
+	public static int count = 0;
 	
 	public int add(String numbers) throws Exception {
+		count++;
 		int sum = 0;
 		boolean flag = false;
 		String temp = "0";
@@ -22,13 +24,23 @@ public class StringCalculator {
 					}
 					else if (c == a) {
 						char cp = numbers.charAt(i+1);
+						temp1+="-";
 						if(Character.isDigit(cp))
 						{
-							temp1+="-"+cp;
-							flag = true;
-							
+							int j=i+1;
+							for (j=i+1;j<numbers.length();j++) {
+								
+								if(Character.isDigit(numbers.charAt(j))==true) {
+									temp1+=numbers.charAt(j);
+								}
+								else 
+								{
+									temp1+=",";
+									break;
+								}
+							}
 						}
-						
+						flag = true;
 					}
 					else
 					{
@@ -42,5 +54,9 @@ public class StringCalculator {
 			}
 			
 	return sum+Integer.parseInt(temp);
+	}
+	
+	public int GetCalledCount() {
+		return count;
 	}
 }
