@@ -35,23 +35,19 @@ and the negative that was passed.
 
 7. Using TDD, Add a method to StringCalculator called public int GetCalledCount() that returns how many times Add() was invoked.
 
-8. (.NET Only) Using TDD, Add an event to the StringCalculator class named
-public event Action<string, int> AddOccured ,
-that is triggered after every Add() call.
-
-9. Numbers bigger than 1000 should be ignored, for example:
+8. Numbers bigger than 1000 should be ignored, for example:
 2 + 1001 == 2
 
-10. Delimiters can be of any length with the following format:
+9. Delimiters can be of any length with the following format:
 “//[delimiter]\n”
 for example:
 “//[***]\n1***2***3” == 6
 
-11. Allow multiple delimiters like this:
+10. Allow multiple delimiters like this:
 “//[delim1][delim2]\n”
 for example
 “//[*][%]\n1*2%3” == 6.
 
-12. make sure you can also handle multiple delimiters with length longer than one char
+11. make sure you can also handle multiple delimiters with length longer than one char
 for example
 “//[**][%%]\n1**2%%3” == 6.
